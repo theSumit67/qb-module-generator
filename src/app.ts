@@ -6,14 +6,11 @@ import {BrowserModule} from '@angular/platform-browser'
 
 @Component({
   selector: 'app-parent',
-  template: ` {{message}} `
+  template: ` <h1>{{message}} </h1>`
 })
 export class ParentComponent {
 
-  let message:string = " msgsssssss ";
-
-  constructor() { }
-
+  message:string = " msgsssssss ";
 
 }
 

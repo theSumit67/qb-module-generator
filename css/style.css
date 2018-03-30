@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    align-content: start;
+}
+.menu{
+    width: 100%;
+}
+.frame-wrap,
+.editor-wrap {
+    width: 50%;
+    position: relative;
+    min-height: calc(100vh - 20px);
+}
+
+#editor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
