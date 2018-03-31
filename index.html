@@ -11,8 +11,8 @@
     <div class="editor-wrap">
         <div id="editor">
             //our root app component
-            import {Component, NgModule, VERSION, OnInit} from '@angular/core'
-            import {BrowserModule} from '@angular/platform-browser'
+            import {Component, VERSION, OnInit} from '@angular/core'
+
 
             // parent.component.ts
 
@@ -23,14 +23,6 @@
             export class ParentComponent {
                 message:string = " from editor ";
             }
-
-            @NgModule({
-            imports: [ BrowserModule ],
-            declarations: [ ParentComponent ],
-            providers : [],
-            bootstrap: [ ParentComponent ]
-            })
-            export class AppModule {}
         </div>
         
         
@@ -40,6 +32,9 @@
       <div class="frame-wrap">
         <iframe id="ngApp" src="./view.html" frameborder="0"></iframe>
     </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.5.8/Rx.js"></script>
+
     <script src="/js/script.js"></script>
 </body>
 
