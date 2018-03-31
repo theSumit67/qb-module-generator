@@ -27,7 +27,7 @@ http.createServer(function (req, res) {
         });
 
         res.writeHead(200, {'Content-Type': 'text/html'});
-        res.end('post received');
+        res.end('component updated . . . ');
         
 
         });

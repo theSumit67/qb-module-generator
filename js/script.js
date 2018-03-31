@@ -1,6 +1,8 @@
 document
   .getElementById("refreshApp")
-  .addEventListener("click", function refreshAppBtnClick() {
+  .addEventListener("click", refreshAppBtnClick );
+
+function refreshAppBtnClick() {
     Rx.Observable.fromPromise(fetch('http://localhost:9000' + '/component', {
         body: editor.getValue(),
         cache: "no-cache",
@@ -11,13 +13,13 @@ document
         mode: "no-cors"
       }))
       .subscribe(response => {
-        console.log(' holla -> ' + response)
+          console.log(response.body)
+          var iframe = document.getElementById("ngApp");
+          iframe.src = iframe.src;
       });
+}
 
-    var iframe = document.getElementById("ngApp");
-    iframe.src = iframe.src;
-    // iframe.contentWindow.location.reload(true);
-  });
+    
 
 /**
  * Editor
@@ -33,7 +35,5 @@ editor.commands.addCommand({
     mac: "Command-S",
     sender: "editor|cli"
   },
-  exec: function(env) {
-    console.log(env);
-  }
+  exec: refreshAppBtnClick
 });

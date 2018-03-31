@@ -3,15 +3,15 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
-import {ParentComponent} from './app.ts'
+import {AppComponent} from './app.ts'
 
 
 
 @NgModule({
     imports: [ BrowserModule ],
-    declarations: [ ParentComponent ],
+    declarations: [ AppComponent ],
     providers : [],
-    bootstrap: [ ParentComponent ]
+    bootstrap: [ AppComponent ]
 })
 export class AppModule {}
 
