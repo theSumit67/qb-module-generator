@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <base href="." />
-    <script type="text/javascript" charset="utf-8">
-      window.AngularVersionForThisPlunker = 'latest'
-    </script>
     <title>angular playground</title>
     <script src="https://unpkg.com/core-js@2.4.1/client/shim.min.js"></script>
     <script src="https://unpkg.com/zone.js/dist/zone.js"></script>
@@ -20,10 +16,10 @@
     <app-parent>
       loading...
     </app-parent>
-        <script>
-          System.import('app')
-            .catch(console.error.bind(console));
-        </script>
+    <script>
+      System.import('src/main.ts')
+        .catch(console.error.bind(console));
+    </script>
   </body>
 
 </html>

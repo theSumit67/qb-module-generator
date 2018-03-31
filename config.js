@@ -1,11 +1,5 @@
-var angularVersion;
-if(window.AngularVersionForThisPlunker === 'latest'){
-  angularVersion = ''; //picks up latest
-}
-else {
-  angularVersion = '@' + window.AngularVersionForThisPlunker;
-}
-
+var angularVersion = '';
+// angularVersion = '@' + window.AngularVersion;
 System.config({
   //use typescript for compilation
   transpiler: 'typescript',
@@ -16,10 +10,10 @@ System.config({
   paths: {
     'npm:': 'https://unpkg.com/'
   },
-  //map tells the System loader where to look for things
+  // map tells the System loader where to look for things
   map: {
     
-    'app': './src',
+    // 'app': './src/',
     '@angular/core': 'npm:@angular/core'+ angularVersion + '/bundles/core.umd.js',
     '@angular/common': 'npm:@angular/common' + angularVersion + '/bundles/common.umd.js',
     '@angular/common/http': 'npm:@angular/common' + angularVersion + '/bundles/common-http.umd.js',
@@ -47,10 +41,7 @@ System.config({
   },
   //packages defines our app package
   packages: {
-    app: {
-      main: './main.ts',
-      defaultExtension: 'ts'
-    },
+    //app: { main: './main.ts', defaultExtension: 'ts' },
     rxjs: {
       defaultExtension: 'js'
     }

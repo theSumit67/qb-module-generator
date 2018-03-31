@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Module Editor</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
     <div class="menu">
         <button id="refreshApp">Reload Frame</button>
@@ -13,42 +11,33 @@
     <div class="editor-wrap">
         <div id="editor">
             //our root app component
-import {Component, NgModule, VERSION, OnInit} from '@angular/core'
-import {BrowserModule} from '@angular/platform-browser'
+            import {Component, NgModule, VERSION, OnInit} from '@angular/core'
+            import {BrowserModule} from '@angular/platform-browser'
 
-// parent.component.ts
+            // parent.component.ts
 
-@Component({
-  selector: 'app-parent',
-  template: ` &lt;h1&gt;{{message}} &lt;/h1&gt;`
-})
-export class ParentComponent {
+            @Component({
+            selector: 'app-parent',
+            template: ` &lt;h1&gt;{{message}} &lt;/h1&gt;`
+            })
+            export class ParentComponent {
+                message:string = " from editor ";
+            }
 
-  message:string = " from editor ";
-
-}
-
-@NgModule({
-  imports: [ BrowserModule ],
-  declarations: [ ParentComponent ],
-  providers : [],
-  bootstrap: [ ParentComponent ]
-})
-export class AppModule {}
+            @NgModule({
+            imports: [ BrowserModule ],
+            declarations: [ ParentComponent ],
+            providers : [],
+            bootstrap: [ ParentComponent ]
+            })
+            export class AppModule {}
         </div>
         
         
     </div>
 
     <script src="/js/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/tomorrow_night_bright");
-        editor.session.setMode("ace/mode/typescript");
-    </script>
-
-
-    <div class="frame-wrap">
+      <div class="frame-wrap">
         <iframe id="ngApp" src="./view.html" frameborder="0"></iframe>
     </div>
     <script src="/js/script.js"></script>

@@ -1,8 +1,5 @@
-//our root app component
-import {Component, NgModule, VERSION, OnInit} from '@angular/core'
-import {BrowserModule} from '@angular/platform-browser'
+import {Component, OnInit} from '@angular/core'
 
-// parent.component.ts
 
 @Component({
   selector: 'app-parent',
@@ -13,11 +10,3 @@ export class ParentComponent {
   message:string = " msgsssssss ";
 
 }
-
-@NgModule({
-  imports: [ BrowserModule ],
-  declarations: [ ParentComponent ],
-  providers : [],
-  bootstrap: [ ParentComponent ]
-})
-export class AppModule {}
