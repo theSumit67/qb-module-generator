@@ -2,8 +2,14 @@
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+if ( true ){
+    import {AppComponent} from '@app.ts'; 
 
-import {AppComponent} from './app.ts'
+} else {
+    import {AppComponent} from './app.ts'
+}
+
+
 
 
 

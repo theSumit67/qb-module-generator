@@ -1,4 +1,9 @@
 var angularVersion = '';
+// var blob = new Blob([ localStorage.getItem('c') ], {type: "text/plain;charset=utf-8"}); 
+console.log ( localStorage.getItem('c') );
+var blob = new Blob([ localStorage.getItem('c') ], {type: 'application/javascript; charset=utf-8'}); 
+var url = URL.createObjectURL(blob);
+
 // angularVersion = '@' + window.AngularVersion;
 System.config({
   //use typescript for compilation
@@ -37,7 +42,8 @@ System.config({
     '@angular/router/testing': 'npm:@angular/router' + angularVersion + '/bundles/router-testing.umd.js',
     'tslib': 'npm:tslib@1.6.1',
     'rxjs': 'npm:rxjs',
-    'typescript': 'npm:typescript@2.2.1/lib/typescript.js'
+    'typescript': 'npm:typescript@2.2.1/lib/typescript.js',
+    '@app.ts': url
   },
   //packages defines our app package
   packages: {
